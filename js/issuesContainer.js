@@ -44,29 +44,29 @@ const displayIssues = (issues) => {
             <div id="card-${id}" onClick="details(${id})" class="card w-full h-full bg-base-100 shadow-sm border-t-5 border-[${cardColor}]">
                 <div class="card-body space-y-2">
                     <div class="flex items-center justify-between">
-                        <div id="issue-${status}">
-                            <img src="./assets/${status}_status.png" alt="" class="w-8">
+                        <div>
+                            ${(status === "open") ?`<img src="./assets/open_status.png" alt="" class="w-8">`:`<img src="./assets/closed_status.png" alt="" class="w-8">`}
                         </div>
-                        <span id="issue-${priority}" class="btn btn-soft ${priorityColor} rounded-full">${priority}</span>
+                        <span data-priority="issue-${priority}" class="btn btn-soft ${priorityColor} rounded-full">${priority}</span>
                     </div>
-                    <h2 id="issue-${title}" class="text-xl font-semibold">${title}</h2>
-                    <p id="issue-${description}" class="text-neutral/50">${description}</p>
-                    <div id="issue-${labels}" class="flex flex-wrap gap-2">
+                    <h2 data-title="issue-${title}" class="text-xl font-semibold">${title}</h2>
+                    <p data-description="issue-${description}" class="text-neutral/50">${description}</p>
+                    <div id="issue-${labels}-${id}" class="flex flex-wrap gap-2">
                     ${labels.map(lbl => {
-                        if (lbl === "bug") {
-                            return `<span class="btn rounded-full bg-error/10 border-error text-error text-xs"><i class="fa-solid fa-bug"></i>${lbl}</span>`;
-                        } else if (lbl === "help wanted") {
-                            return `<span class="btn rounded-full bg-warning/10 border-warning text-warning text-xs"><i class="fa-regular fa-life-ring"></i>${lbl}</span>`;
-                        } else if (lbl === "enhancement") {
-                            return `<span class="btn rounded-full bg-success/10 border-success text-success text-xs"><i class="fa-solid fa-wand-magic-sparkles"></i>${lbl}</span>`;
-                        }
-                    }).join('')}
+                    if (lbl === "bug") {
+                        return `<span class="btn rounded-full bg-error/10 border-error text-error text-xs"><i class="fa-solid fa-bug"></i>${lbl}</span>`;
+                    } else if (lbl === "help wanted") {
+                        return `<span class="btn rounded-full bg-warning/10 border-warning text-warning text-xs"><i class="fa-regular fa-life-ring"></i>${lbl}</span>`;
+                    } else if (lbl === "enhancement") {
+                        return `<span class="btn rounded-full bg-success/10 border-success text-success text-xs"><i class="fa-solid fa-wand-magic-sparkles"></i>${lbl}</span>`;
+                    }
+                }).join('')}
                     </div>
                         </div>
                         <hr class="border-neutral/10">
                         <div class="card-body text-neutral/50">
-                                <p>#<span id="issue-${id}">${id}</span> by <span id="issue-${author}">${author}</span></p>
-                                <p id="issue-${createdAt}">${createdAt}</p>
+                                <p>#<span id="issue-${id}">${id}</span> by <span data-author="issue-${author}">${author}</span></p>
+                                <p data-created-at="issue-${createdAt}">${createdAt}</p>
                         </div>
                     </div>
         `;
