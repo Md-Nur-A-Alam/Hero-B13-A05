@@ -57,6 +57,9 @@
             <button class="btn w-30">Open</button>
             <button class="btn w-30">Closed</button>
         </section>
+
+
+
         <!-- Issue Information -->
         <section id="issue-info"
             class="flex justify-between  py-3 px-5 bg-base-100 border border-neutral/10 shadow-sm rounded-lg">
@@ -78,30 +81,40 @@
                 </div>
             </div>
         </section>
+
+
+
         <!-- Issues Container -->
-        <section id="issues-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5">
+        <section id="issues-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-5">
             <!-- Issue Card -->
-            <div class="card w-full bg-base-100 shadow-sm border-t-5 border-[#00A96E]">
+            <div id="issue-id" onClick="details(id)" class="card w-full h-full bg-base-100 shadow-sm border-t-5 border-[#00A96E]">
                 <div class="card-body space-y-2">
                     <div class="flex items-center justify-between">
-                        <img src="./assets/Open-Status.png" alt="" class="w-8">
-                        <span class="badge badge-lg badge-error">high</span>
+                        <div id="issue-status">
+                            <img src="./assets/Open-Status.png" alt="" class="w-8">
+                        </div>
+                        <span id="issue-priority" class="btn btn-soft btn-error">high</span>
                     </div>
-                    <h2 class="text-2xl font-semibold">Fix navigation menu on mobile devices</h2>
-                    <p class="text-neutral/50">The navigation menu doesn't collapse properly on mobile devices.</p>
-                    <div class="flex gap-2">
-
+                    <h2 id="issue-title" class="text-xl font-semibold">Fix navigation menu on mobile devices</h2>
+                    <p id="issue-description" class="text-neutral/50">The navigation menu doesn't collapse properly on mobile devices.</p>
+                    <div id="issue-labels" class="flex flex-wrap gap-2">
+                        <span class="btn rounded-full bg-error/10 border-error text-error"><i class="fa-solid fa-bug"></i>Bug</span>
+                        <span class="btn rounded-full bg-warning/10 border-warning text-warning"><i class="fa-regular fa-life-ring"></i>Help Wanted</span>
+                        <span class="btn rounded-full bg-success/10 border-success text-success"><i class="fa-solid fa-wand-magic-sparkles"></i>Enhancement</span>
                     </div>
                 </div>
                 <hr class="border-neutral/10">
                 <div class="card-body text-neutral/50">
-                        <p>#<span>1</span> by <span>John Doe</span></p>
-                        <p>1/15/2024</p>
+                        <p>#<span id="issue-id">1</span> by <span id="issue-author">John Doe</span></p>
+                        <p id="issue-date">1/15/2024</p>
                 </div>
             </div>
         </section>
     </main>
+    <script src="./js/apiLinks.js"></script>
     <script src="./js/signIn.js"></script>
+    <script src="./js/issuesContainer.js"></script>
+    <script src="./js/detailIssue.js"></script>
 </body>
 
 </html>
