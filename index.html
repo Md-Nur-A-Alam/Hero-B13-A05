@@ -23,54 +23,54 @@
     <!-- css link -->
     <link rel="stylesheet" href="./style/style.css">
 </head>
-<header id="sign-in-container">
-    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl mx-auto my-[10%]">
-        <div class="card-body">
-            <div id="card-title" class="text-center">
-                <img src="./assets/github-logo.png" alt="" class="mx-auto my-3">
-                <h2 class="text-2xl font-bold ">GitHub Issues Tracker</h2>
-                <p class="text-neutral/50">Sign in to manage your issues</p>
-            </div>
-            <fieldset class="fieldset space-y-2">
-                <div class="space-y-1">
-                    <label class="label text-black font-semibold">Username</label>
-                    <input id="username" type="text" class="input validator" required placeholder="Enter Username"
-                        title="Only letters, numbers or dash" required/>
-                    <p class="text-primary">
-                        Default: admin
-                    </p>
-                </div>
-                <div class="space-y-1">
-                    <label class="label text-black font-semibold">Password</label>
-                    <input id="password" type="password" class="input" required placeholder="Password"
-                        title="Must be more than 8 characters, including number and letter" required/>
-                    <p class="text-primary">
-                        Default: admin123
-                    </p>
-                </div>
-                <button id="submit" onclick="signInFunc()" class="btn btn-primary mt-4">Sign In</button>
-                <div class="flex justify-center items-center gap-2">
-                    <hr class="flex-grow border-t border-gray-300">
-                    OR
-                    <hr class="flex-grow border-t border-gray-300">
-                </div>
-                <div class="demo-credentials text-center">
-                    <p class="text-[0.675rem] text-neutral/50">
-                        Demo Credientials:
-                    </p>
-                    <div class="p-4 bg-base-200 rounded-lg">
-                        <p><span class="font-semibold">Username: </span>admin</p>
-                        <p><span class="font-semibold">Password: </span>admin123</p>
-                    </div>
-                </div>
-                <div id="alert" class="text-error text-center"></div>
-            </fieldset>
-        </div>
-    </div>
-</header>
-<script src="./js/signIn.js"></script>
-<body>
 
+<body>
+    <header id="sign-in-container">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl mx-auto my-[10%]">
+            <div class="card-body">
+                <div id="card-title" class="text-center">
+                    <img src="./assets/github-logo.png" alt="" class="mx-auto my-3">
+                    <h2 class="text-2xl font-bold ">GitHub Issues Tracker</h2>
+                    <p class="text-neutral/50">Sign in to manage your issues</p>
+                </div>
+                <fieldset class="fieldset space-y-2">
+                    <div class="space-y-1">
+                        <label class="label text-black font-semibold">Username</label>
+                        <input id="username" type="text" class="input validator" required placeholder="Enter Username"
+                            title="Only letters, numbers or dash" required />
+                        <p class="text-primary">
+                            Default: admin
+                        </p>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="label text-black font-semibold">Password</label>
+                        <input id="password" type="password" class="input" required placeholder="Password"
+                            title="Must be more than 8 characters, including number and letter" required />
+                        <p class="text-primary">
+                            Default: admin123
+                        </p>
+                    </div>
+                    <button id="submit" onclick="signInFunc()" class="btn btn-primary mt-4">Sign In</button>
+                    <div class="flex justify-center items-center gap-2">
+                        <hr class="flex-grow border-t border-gray-300">
+                        OR
+                        <hr class="flex-grow border-t border-gray-300">
+                    </div>
+                    <div class="demo-credentials text-center">
+                        <p class="text-[0.675rem] text-neutral/50">
+                            Demo Credientials:
+                        </p>
+                        <div class="p-4 bg-base-200 rounded-lg">
+                            <p><span class="font-semibold">Username: </span>admin</p>
+                            <p><span class="font-semibold">Password: </span>admin123</p>
+                        </div>
+                    </div>
+                    <div id="alert" class="text-error text-center"></div>
+                </fieldset>
+            </div>
+        </div>
+    </header>
+    <script src="./js/signIn.js"></script>
 </body>
 
 </html>
