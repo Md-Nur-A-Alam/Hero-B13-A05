@@ -1,6 +1,7 @@
 document.getElementById("action-btn").addEventListener("click", (event) => {
     const targetBtn = event.target.closest("BUTTON");
     if (!targetBtn) return;
+    issuesLoading(false);
     document.querySelectorAll("#action-btn button").forEach(btn => btn.classList.remove("btn-primary"));
     targetBtn.classList.add("btn-primary");
     const status = targetBtn.innerText.trim().toLowerCase();
@@ -44,7 +45,7 @@ const displayIssues = (issues) => {
                 <div class="card-body space-y-2">
                     <div class="flex items-center justify-between">
                         <div id="issue-${status}">
-                            <img src="./assets/${status}-Status.png" alt="" class="w-8">
+                            <img src="./assets/${status}_status.png" alt="" class="w-8">
                         </div>
                         <span id="issue-${priority}" class="btn btn-soft ${priorityColor} rounded-full">${priority}</span>
                     </div>
@@ -71,6 +72,7 @@ const displayIssues = (issues) => {
         `;
         container.append(newDiv);
     });
+    issuesLoading(true);
 };
 
 
