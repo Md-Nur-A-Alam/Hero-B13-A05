@@ -27,13 +27,13 @@
 <body>
     <header id="nav-bar" class="bg-base-100 shadow-sm glass sticky top-0 z-50 backdrop-blur-md">
         <div class="navbar w-full md:w-11/12 lg:w-10/12 mx-auto">
-            <div class="flex-1 items-center gap-1 justify-start">
+            <div class="flex-1 items-center gap-1 justify-start cursor-pointer">
                 <div class="flex items-center justify-start gap-1">
                     <img src="./assets/github-logo.png" alt="" class="w-10">
                     <a class="text-xl hidden sm:inline-block font-semibold">GitHub Issues Tracker</a>
                 </div>
             </div>
-            <div class="flex gap-0 sm:gap-2">
+            <div class="navbar-end flex gap-[2px]">
                 <label class="input">
                     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
@@ -42,10 +42,10 @@
                             <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input type="search" required placeholder="Search" />
+                    <input id="searchBox" type="search" required placeholder="Search issues..." />
                 </label>
-                <div class="navbar-end">
-                    <a class="btn btn-primary">+ New Issue</a>
+                <div class="">
+                    <a class="btn btn-primary" id="search">Search</a>
                 </div>
             </div>
         </div>
@@ -88,18 +88,40 @@
             <span class="loading loading-infinity loading-xl w-[10%] text-neutral/20 mx-auto"></span>
         </div>
         <!-- Issues Container -->
-        <section id="issues-container" class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-5">
-            
-            
+        <section id="issues-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-5">
+
+
             <!-- Issue Card -->
 
 
         </section>
+
+        <!-- modal -->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="issueDetail.showModal()">open modal</button>
+        <dialog id="issueDetail" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-details">
+                    
+                    <!-- details will be placed here -->
+
+                </div>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
     <script src="./js/home.js"></script>
     <script src="./js/signIn.js"></script>
     <script src="./js/issuesContainer.js"></script>
     <script src="./js/detailIssue.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@ const signInFunc = () => {
 };
 
 const checkSession = () => {
-    if (!sessionToken) {
+    if (!sessionToken || sessionToken === false) {
         window.location.href = "index.html";
     } else {
         window.location.href = "home.html";
