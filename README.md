@@ -1,3 +1,46 @@
+## 1️⃣ What is the difference between var, let, and const?
+Ans: All these are variable declaring way but
+- var is a old version that mostly used to declaring variables. it is a functions scoped and modifiable; it also can accessable before declaring sometimes.
+- let is also can modify used to declare the variable. block scoped data type
+- const is a constant declaretion way of variable. it can not changed once it's value assigned.
+
+## 2️⃣ What is the spread operator (...)?
+Ans: Spread operator used to bring the exact value of an array. it provides us the flexibility to marge arrays, copy and pass the arrays multiple value.
+
+## 3️⃣ What is the difference between map(), filter(), and forEach()?
+Ans: All three are used to work with array's elements with different approach and purpose.
+- map(): created a new array. and the elements are created in each iteration. it returns array;
+- filter(): it used to creates a new array with some condition
+- forEach(): it just used to perform iteration works. it does not return anything.
+
+## 4️⃣ What is an arrow function?
+Ans: It is a Shorter way to write functions in js. it's a feature of ES6 JS. 
+
+## 5️⃣ What are template literals?
+Ans: It's a very powerful way to express the html string in JS more easily. it's also a feature of ES6 JS version.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
 
 # **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
